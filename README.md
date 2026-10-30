@@ -36,8 +36,8 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,ts,js,react,nextjs,nodejs,express,tailwind,postgres,prisma,cloudflare,vercel,git,githubactions,selenium,latex&perline=8&theme=dark">
-    <img alt="Python, TypeScript, JavaScript, React, Next.js, Node.js, Express, Tailwind, PostgreSQL, Prisma, Cloudflare, Vercel, Git, GitHub Actions, Selenium y LaTeX" src="https://skillicons.dev/icons?i=py,ts,js,react,nextjs,nodejs,express,tailwind,postgres,prisma,cloudflare,vercel,git,githubactions,selenium,latex&perline=8&theme=light">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Cexpress%2Ctailwind%2Cpostgres%2Cprisma%2Ccloudflare%2Cvercel%2Cgit%2Cgithubactions%2Cselenium%2Clatex&perline=8&theme=dark">
+    <img alt="Python, TypeScript, JavaScript, React, Next.js, Node.js, Express, Tailwind, PostgreSQL, Prisma, Cloudflare, Vercel, Git, GitHub Actions, Selenium y LaTeX" src="https://skillicons.dev/icons?i=py%2Cts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Cexpress%2Ctailwind%2Cpostgres%2Cprisma%2Ccloudflare%2Cvercel%2Cgit%2Cgithubactions%2Cselenium%2Clatex&perline=8&theme=light">
   </picture>
 </p>
 
