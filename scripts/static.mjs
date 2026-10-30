@@ -187,11 +187,20 @@ function footer(t) {
 const S = (id) => ({ skill: id });
 const I = (id, opts = {}) => ({ iconify: id, ...opts });
 
+// Ícono propio para imágenes hiperespectrales, una pila de bandas del espectro
+const SPECTRAL = () =>
+  ['#7c3aed', '#2563eb', '#06b6d4', '#22c55e', '#eab308', '#ef4444']
+    .map((c, i) => {
+      const o = (5 - i) * 13;
+      return `<rect x="${52 + o}" y="${92 - o}" width="108" height="108" rx="14" fill="${c}" fill-opacity="0.92"/>`;
+    })
+    .join('') +
+  '<path d="M88 92v108M124 92v108M52 128h108M52 164h108" stroke="#fff" stroke-opacity="0.45" stroke-width="3"/>';
+
 // Cada fila agrupa categorías que caben lado a lado
 const STACK = [
   [
-    ['Lenguajes', 'copper', [['Python', S('py')], ['C#', S('cs')], ['C++', S('cpp')], ['TypeScript', S('ts')], ['JavaScript', S('js')], ['LaTeX', S('latex')]]],
-    ['Power Platform', 'gold', [['Power Apps', I('arcticons:microsoft-power-apps', { color: '#a33bbd', stroke: 3 })], ['Power Automate', I('selfhst:microsoft-power-automate')], ['Power BI', I('logos:microsoft-power-bi')]]],
+    ['Lenguajes', 'copper', [['Python', S('py')], ['C#', S('cs')], ['C++', S('cpp')], ['Rust', S('rust')], ['Go', S('go')], ['TypeScript', S('ts')], ['JavaScript', S('js')], ['COBOL', { url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg', fill: { dark: '#ffffff', light: '#1f2937' }, pad: 22 }], ['LaTeX', S('latex')]]],
   ],
   [
     ['Web y backend', 'teal', [['Next.js', S('nextjs')], ['React', S('react')], ['Node.js', S('nodejs')], ['Express', S('express')], ['Tailwind', S('tailwind')], ['Socket.io', I('devicon:socketio', { dark: '#010101' })], ['Prisma', S('prisma')], ['PostgreSQL', S('postgres')]]],
@@ -200,31 +209,58 @@ const STACK = [
     ['Nube', 'blue', [['AWS', S('aws')], ['Azure', S('azure')], ['Google Cloud', S('gcp')], ['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')], ['Actions', S('githubactions')], ['Git', S('git')]]],
   ],
   [
-    ['Visión artificial y automatización industrial', 'copper', [['OpenCV', S('opencv')], ['YOLO', I('simple-icons:ultralytics', { color: { dark: '#5b8cff', light: '#111f68' } })], ['PyTorch', S('pytorch')], ['Siemens PLC', I('simple-icons:siemens', { color: '#009999', pad: 14 })], ['Node-RED', I('devicon:nodered')], ['MQTT', I('simple-icons:mqtt', { color: { dark: '#c58cd8', light: '#660066' } })], ['Raspberry Pi', S('raspberrypi')], ['Arduino', S('arduino')]]],
+    ['Visión artificial', 'copper', [['OpenCV', S('opencv')], ['YOLO', I('simple-icons:ultralytics', { color: { dark: '#5b8cff', light: '#111f68' } })], ['PyTorch', S('pytorch')], ['Living Optics', { custom: SPECTRAL, pad: 0 }]]],
+    ['Datos y machine learning', 'teal', [['Jupyter', I('devicon:jupyter')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['scikit-learn', S('sklearn')], ['TensorFlow', S('tensorflow')], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
   ],
   [
-    ['Automatización', 'violet', [['Selenium', S('selenium')], ['Playwright', I('logos:playwright')], ['n8n', I('logos:n8n-icon')], ['Zapier', I('logos:zapier-icon')], ['UiPath', I('simple-icons:uipath', { color: '#fa4616' })], ['PowerShell', S('powershell')]]],
-    ['Datos e IA', 'teal', [['Jupyter', I('devicon:jupyter')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
+    ['Automatización industrial', 'gold', [['Siemens PLC', I('simple-icons:siemens', { color: '#009999', pad: 14 })], ['Schneider', { url: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/schneiderelectric.svg', fill: '#3dcd58' }], ['Node-RED', I('devicon:nodered')], ['MQTT', I('simple-icons:mqtt', { color: { dark: '#c58cd8', light: '#660066' } })], ['Raspberry Pi', S('raspberrypi')], ['Arduino', S('arduino')]]],
+    ['Power Platform', 'violet', [['Power Apps', I('arcticons:microsoft-power-apps', { color: '#a33bbd', stroke: 3 })], ['Power Automate', I('selfhst:microsoft-power-automate')], ['Power BI', I('logos:microsoft-power-bi')]]],
+  ],
+  [
+    ['Automatización', 'blue', [['Selenium', S('selenium')], ['Playwright', I('logos:playwright')], ['n8n', I('logos:n8n-icon')], ['Zapier', I('logos:zapier-icon')], ['UiPath', I('simple-icons:uipath', { color: '#fa4616' })], ['PowerShell', S('powershell')]]],
   ],
 ];
 
 const TILE = { dark: '#242938', light: '#F4F2ED' };
 
-async function logo(spec, theme) {
-  if (spec.skill) {
-    const res = await fetch(`https://skillicons.dev/icons?i=${spec.skill}&theme=${theme}`);
-    return res.text();
+const cache = new Map();
+
+// Descarga con caché y reintentos porque Iconify limita las consultas seguidas
+async function fetchText(url) {
+  if (cache.has(url)) return cache.get(url);
+  for (let attempt = 0; attempt < 6; attempt++) {
+    const res = await fetch(url);
+    if (res.ok) {
+      const text = await res.text();
+      cache.set(url, text);
+      return text;
+    }
+    await new Promise((r) => setTimeout(r, 5000 * (attempt + 1)));
   }
-  const [set, name] = spec.iconify.split(':');
-  const tint = typeof spec.color === 'object' ? spec.color[theme] : spec.color;
-  const color = tint ? `?color=${encodeURIComponent(tint)}` : '';
-  let svg = await (await fetch(`https://api.iconify.design/${set}/${name}.svg${color}`)).text();
+  throw new Error(`No pude descargar ${url}`);
+}
+
+async function logo(spec, theme) {
+  if (spec.skill) return fetchText(`https://skillicons.dev/icons?i=${spec.skill}&theme=${theme}`);
+  const pick = (v) => (typeof v === 'object' ? v[theme] : v);
+  let svg;
+  if (spec.custom) svg = `<svg viewBox="0 0 256 256">${spec.custom()}</svg>`;
+  else if (spec.url) svg = await fetchText(spec.url);
+  else {
+    const [set, name] = spec.iconify.split(':');
+    const tint = pick(spec.color);
+    svg = await fetchText(`https://api.iconify.design/${set}/${name}.svg${tint ? `?color=${encodeURIComponent(tint)}` : ''}`);
+  }
   if (spec.stroke) svg = svg.replaceAll('stroke-linecap', `stroke-width="${spec.stroke}" stroke-linecap`);
+  if (spec.fill) svg = svg.replace('<svg ', `<svg fill="${pick(spec.fill)}" `);
   if (theme === 'dark' && spec.dark === 'root') svg = svg.replace('<svg ', '<svg fill="#ffffff" ');
   else if (theme === 'dark' && spec.dark) svg = svg.replaceAll(`fill="${spec.dark}"`, 'fill="#ffffff"');
   // Se coloca dentro de una baldosa con el mismo estilo de skillicons
   const pad = spec.pad ?? 48;
-  svg = svg.replace(/<svg([^>]*?) width="[^"]*" height="[^"]*"/, `<svg$1 x="${pad}" y="${pad}" width="${256 - pad * 2}" height="${256 - pad * 2}"`);
+  svg = svg.replace(/<svg([^>]*)>/, (_, attrs) => {
+    const clean = attrs.replace(/\s(width|height|x|y)="[^"]*"/g, '');
+    return `<svg${clean} x="${pad}" y="${pad}" width="${256 - pad * 2}" height="${256 - pad * 2}">`;
+  });
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="60" fill="${TILE[theme]}"/>${svg}</svg>`;
 }
 
