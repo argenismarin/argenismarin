@@ -40,8 +40,8 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
 ## Con qué trabajo
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg">
-  <img alt="Lenguajes (Python, C#, C++, Rust, Go, COBOL y más), web, nube (AWS, Azure, Google Cloud), servidores Linux y DevOps, visión artificial, machine learning, automatización industrial (Siemens, Schneider), Power Platform y automatización" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg?v=7">
+  <img alt="Lenguajes (Python, C#, C++, Rust, Go, COBOL y más), web, nube (AWS, Azure, Google Cloud), servidores Linux y DevOps, visión artificial, machine learning, automatización industrial (Siemens, Schneider), Power Platform y automatización" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg?v=7" width="100%">
 </picture>
 
 ## Actividad y lenguajes
