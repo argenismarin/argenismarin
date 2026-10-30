@@ -6,7 +6,8 @@ const W = 1200;
 const PHRASES = [
   'Ingeniero de Minas y Metalurgia',
   'Desarrollador full-stack',
-  'Automatización con Python',
+  'Visión artificial',
+  'Automatización industrial',
   'IA aplicada a problemas reales',
 ];
 
@@ -113,8 +114,8 @@ function header(t) {
   let px = 72;
   const pills = [
     ['Minería y metalurgia', t.copper],
-    ['Python', t.gold],
-    ['TypeScript', t.teal],
+    ['Visión artificial', t.gold],
+    ['Automatización industrial', t.teal],
     ['IA aplicada', t.violet],
   ]
     .map(([label, color]) => {
@@ -196,8 +197,14 @@ const STACK = [
     ['Web y backend', 'teal', [['Next.js', S('nextjs')], ['React', S('react')], ['Node.js', S('nodejs')], ['Express', S('express')], ['Tailwind', S('tailwind')], ['Socket.io', I('devicon:socketio', { dark: '#010101' })], ['Prisma', S('prisma')], ['PostgreSQL', S('postgres')]]],
   ],
   [
-    ['Nube', 'blue', [['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')], ['Actions', S('githubactions')], ['Git', S('git')]]],
-    ['Datos y automatización', 'violet', [['Jupyter', I('devicon:jupyter')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['Selenium', S('selenium')], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
+    ['Nube', 'blue', [['AWS', S('aws')], ['Azure', S('azure')], ['Google Cloud', S('gcp')], ['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')], ['Actions', S('githubactions')], ['Git', S('git')]]],
+  ],
+  [
+    ['Visión artificial y automatización industrial', 'copper', [['OpenCV', S('opencv')], ['YOLO', I('simple-icons:ultralytics', { color: { dark: '#5b8cff', light: '#111f68' } })], ['PyTorch', S('pytorch')], ['Siemens PLC', I('simple-icons:siemens', { color: '#009999', pad: 14 })], ['Node-RED', I('devicon:nodered')], ['MQTT', I('simple-icons:mqtt', { color: { dark: '#c58cd8', light: '#660066' } })], ['Raspberry Pi', S('raspberrypi')], ['Arduino', S('arduino')]]],
+  ],
+  [
+    ['Automatización', 'violet', [['Selenium', S('selenium')], ['Playwright', I('logos:playwright')], ['n8n', I('logos:n8n-icon')], ['Zapier', I('logos:zapier-icon')], ['UiPath', I('simple-icons:uipath', { color: '#fa4616' })], ['PowerShell', S('powershell')]]],
+    ['Datos e IA', 'teal', [['Jupyter', I('devicon:jupyter')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
   ],
 ];
 
@@ -209,13 +216,15 @@ async function logo(spec, theme) {
     return res.text();
   }
   const [set, name] = spec.iconify.split(':');
-  const color = spec.color ? `?color=${encodeURIComponent(spec.color)}` : '';
+  const tint = typeof spec.color === 'object' ? spec.color[theme] : spec.color;
+  const color = tint ? `?color=${encodeURIComponent(tint)}` : '';
   let svg = await (await fetch(`https://api.iconify.design/${set}/${name}.svg${color}`)).text();
   if (spec.stroke) svg = svg.replaceAll('stroke-linecap', `stroke-width="${spec.stroke}" stroke-linecap`);
   if (theme === 'dark' && spec.dark === 'root') svg = svg.replace('<svg ', '<svg fill="#ffffff" ');
   else if (theme === 'dark' && spec.dark) svg = svg.replaceAll(`fill="${spec.dark}"`, 'fill="#ffffff"');
   // Se coloca dentro de una baldosa con el mismo estilo de skillicons
-  svg = svg.replace(/<svg([^>]*?) width="[^"]*" height="[^"]*"/, '<svg$1 x="48" y="48" width="160" height="160"');
+  const pad = spec.pad ?? 48;
+  svg = svg.replace(/<svg([^>]*?) width="[^"]*" height="[^"]*"/, `<svg$1 x="${pad}" y="${pad}" width="${256 - pad * 2}" height="${256 - pad * 2}"`);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="60" fill="${TILE[theme]}"/>${svg}</svg>`;
 }
 

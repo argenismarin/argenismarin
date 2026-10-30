@@ -21,6 +21,7 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
 
 - Hago crecer **[MineLab](https://github.com/argenismarin/MineLab)**, una librería de Python para ingeniería minera publicada en PyPI
 - Construyo PWAs con Cloudflare Workers, D1 y notificaciones push
+- Desarrollo soluciones de visión artificial y automatización industrial, de la cámara y el PLC al tablero
 - Diseño apps, flujos y tableros con Power Apps, Power Automate y Power BI
 - Integro IA en flujos reales, como asistentes con RAG y lectura de facturas con OCR
 - Automatizo registros, certificados y formularios para que nadie tenga que hacerlos a mano
@@ -38,7 +39,7 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg">
-  <img alt="Python, C#, C++, TypeScript, JavaScript, SQL, LaTeX, Next.js, React, Node.js, Power Apps, Power Automate, Power BI y más" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg" width="100%">
+  <img alt="Lenguajes, Power Platform, web, nube (AWS, Azure, Google Cloud), visión artificial, automatización industrial, automatización y datos" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg" width="100%">
 </picture>
 
 ## Actividad y lenguajes
