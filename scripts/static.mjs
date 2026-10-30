@@ -182,51 +182,81 @@ function footer(t) {
 `;
 }
 
+// Logos de skillicons cuando existen y de Iconify para el resto
+const S = (id) => ({ skill: id });
+const I = (id, opts = {}) => ({ iconify: id, ...opts });
+
+// Cada fila agrupa categorías que caben lado a lado
 const STACK = [
-  ['Lenguajes', 'copper', ['Python', 'C#', 'C++', 'TypeScript', 'JavaScript', 'SQL', 'LaTeX']],
-  ['Web y backend', 'teal', ['Next.js', 'React', 'Node.js', 'Express', 'Tailwind CSS', 'Socket.io', 'Prisma', 'PostgreSQL']],
-  ['Power Platform', 'gold', ['Power Apps', 'Power Automate', 'Power BI']],
-  ['Nube', 'blue', ['Cloudflare Workers', 'D1', 'Vercel', 'GitHub Actions', 'Git']],
-  ['Datos y automatización', 'violet', ['Jupyter', 'pandas', 'Selenium', 'OpenAI API', 'RAG', 'OCR']],
+  [
+    ['Lenguajes', 'copper', [['Python', S('py')], ['C#', S('cs')], ['C++', S('cpp')], ['TypeScript', S('ts')], ['JavaScript', S('js')], ['LaTeX', S('latex')]]],
+    ['Power Platform', 'gold', [['Power Apps', I('arcticons:microsoft-power-apps', { color: '#a33bbd', stroke: 3 })], ['Power Automate', I('selfhst:microsoft-power-automate')], ['Power BI', I('logos:microsoft-power-bi')]]],
+  ],
+  [
+    ['Web y backend', 'teal', [['Next.js', S('nextjs')], ['React', S('react')], ['Node.js', S('nodejs')], ['Express', S('express')], ['Tailwind', S('tailwind')], ['Socket.io', I('devicon:socketio', { dark: '#010101' })], ['Prisma', S('prisma')], ['PostgreSQL', S('postgres')]]],
+  ],
+  [
+    ['Nube', 'blue', [['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')], ['Actions', S('githubactions')], ['Git', S('git')]]],
+    ['Datos y automatización', 'violet', [['Jupyter', I('devicon:jupyter')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['Selenium', S('selenium')], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
+  ],
 ];
 
-// Tarjeta del stack agrupada por categorías, con píldoras que saltan de línea solas
-function stack(t) {
+const TILE = { dark: '#242938', light: '#F4F2ED' };
+
+async function logo(spec, theme) {
+  if (spec.skill) {
+    const res = await fetch(`https://skillicons.dev/icons?i=${spec.skill}&theme=${theme}`);
+    return res.text();
+  }
+  const [set, name] = spec.iconify.split(':');
+  const color = spec.color ? `?color=${encodeURIComponent(spec.color)}` : '';
+  let svg = await (await fetch(`https://api.iconify.design/${set}/${name}.svg${color}`)).text();
+  if (spec.stroke) svg = svg.replaceAll('stroke-linecap', `stroke-width="${spec.stroke}" stroke-linecap`);
+  if (theme === 'dark' && spec.dark === 'root') svg = svg.replace('<svg ', '<svg fill="#ffffff" ');
+  else if (theme === 'dark' && spec.dark) svg = svg.replaceAll(`fill="${spec.dark}"`, 'fill="#ffffff"');
+  // Se coloca dentro de una baldosa con el mismo estilo de skillicons
+  svg = svg.replace(/<svg([^>]*?) width="[^"]*" height="[^"]*"/, '<svg$1 x="48" y="48" width="160" height="160"');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="60" fill="${TILE[theme]}"/>${svg}</svg>`;
+}
+
+async function stack(t, theme) {
   const SW = 1000;
-  const left = 250;
-  const right = SW - 32;
-  let y = 30;
-  const rows = STACK.map(([label, color, items], i) => {
-    const rowY = y;
-    let x = left;
-    let line = 0;
-    const pills = items
-      .map((item) => {
-        const p = pill(0, 0, item, t[color], t, { size: 14, charW: 7.9, pad: 13 });
-        if (x + p.w > right) {
-          x = left;
-          line++;
-        }
-        const out = pill(x, line * 40, item, t[color], t, { size: 14, charW: 7.9, pad: 13 }).svg;
-        x += p.w + 9;
-        return out;
-      })
-      .join('');
-    y += 40 * (line + 1) + 14;
-    return `<g transform="translate(0 ${rowY})"><g class="rise" style="animation-delay:${(0.1 + i * 0.1).toFixed(2)}s">
-      <rect x="32" y="6" width="4" height="16" rx="2" fill="${t[color]}"/>
-      <text x="46" y="19.5" font-family="${SANS}" font-size="15" font-weight="700" fill="${t.text}">${esc(label)}</text>
-      ${pills}
-    </g></g>`;
-  }).join('');
-  const SH = y + 16;
+  const cell = 96;
+  const tile = 52;
+  const gap = 40;
+  const rowH = 128;
+  let k = 0;
+  const rows = [];
+  for (const [r, groups] of STACK.entries()) {
+    const width = groups.reduce((a, [, , items]) => a + items.length * cell, 0) + gap * (groups.length - 1);
+    let x = (SW - width) / 2;
+    const y = 28 + r * rowH;
+    for (const [label, color, items] of groups) {
+      const tiles = [];
+      for (const [i, [name, spec]] of items.entries()) {
+        const data = Buffer.from(await logo(spec, theme)).toString('base64');
+        const cx = i * cell + cell / 2;
+        tiles.push(`<g class="rise" style="animation-delay:${(0.08 + k++ * 0.035).toFixed(2)}s">
+          <image x="${cx - tile / 2}" y="34" width="${tile}" height="${tile}" href="data:image/svg+xml;base64,${data}"/>
+          <text x="${cx}" y="106" text-anchor="middle" font-family="${SANS}" font-size="12.5" fill="${t.text}" fill-opacity="0.8">${esc(name)}</text>
+        </g>`);
+      }
+      rows.push(`<g transform="translate(${x} ${y})">
+        <rect x="${cell / 2 - tile / 2}" y="4" width="4" height="16" rx="2" fill="${t[color]}"/>
+        <text x="${cell / 2 - tile / 2 + 12}" y="17.5" font-family="${SANS}" font-size="15" font-weight="700" fill="${t.text}">${esc(label)}</text>
+        ${tiles.join('')}
+      </g>`);
+      x += items.length * cell + gap;
+    }
+  }
+  const SH = 28 + STACK.length * rowH;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" role="img" aria-label="Tecnologías con las que trabajo">
   <style>
     @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-    .rise { animation: rise 0.7s ease-out both; }
+    .rise { animation: rise 0.6s ease-out both; }
   </style>
   <rect x="0.5" y="0.5" width="${SW - 1}" height="${SH - 1}" rx="16" fill="${t.card}" stroke="${t.border}"/>
-  ${rows}
+  ${rows.join('')}
 </svg>
 `;
 }
@@ -235,6 +265,6 @@ mkdirSync(new URL('../assets/', import.meta.url), { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(new URL(`../assets/header-${name}.svg`, import.meta.url), header(t));
   writeFileSync(new URL(`../assets/footer-${name}.svg`, import.meta.url), footer(t));
-  writeFileSync(new URL(`../assets/stack-${name}.svg`, import.meta.url), stack(t));
+  writeFileSync(new URL(`../assets/stack-${name}.svg`, import.meta.url), await stack(t, name));
 }
 console.log('assets listos');
