@@ -21,6 +21,7 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
 
 - Hago crecer **[MineLab](https://github.com/argenismarin/MineLab)**, una librería de Python para ingeniería minera publicada en PyPI
 - Construyo PWAs con Cloudflare Workers, D1 y notificaciones push
+- Manejo servidores Linux a nivel avanzado, desde la configuración y la seguridad hasta el despliegue de servicios con Docker y Nginx
 - Trabajo con cámaras hiperespectrales y multiespectrales de Living Optics y diseño funciones de machine learning para analizar lo que capturan
 - He trabajado con equipos Schneider Electric en estaciones eléctricas y conecto PLC, sensores y tableros en proyectos de automatización industrial
 - Diseño apps, flujos y tableros con Power Apps, Power Automate y Power BI
@@ -40,7 +41,7 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg">
-  <img alt="Lenguajes (Python, C#, C++, Rust, Go, COBOL y más), web, nube (AWS, Azure, Google Cloud), visión artificial, machine learning, automatización industrial (Siemens, Schneider), Power Platform y automatización" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg" width="100%">
+  <img alt="Lenguajes (Python, C#, C++, Rust, Go, COBOL y más), web, nube (AWS, Azure, Google Cloud), servidores Linux y DevOps, visión artificial, machine learning, automatización industrial (Siemens, Schneider), Power Platform y automatización" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg" width="100%">
 </picture>
 
 ## Actividad y lenguajes

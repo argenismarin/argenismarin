@@ -206,7 +206,11 @@ const STACK = [
     ['Web y backend', 'teal', [['Next.js', S('nextjs')], ['React', S('react')], ['Node.js', S('nodejs')], ['Express', S('express')], ['Tailwind', S('tailwind')], ['Socket.io', I('devicon:socketio', { dark: '#010101' })], ['Prisma', S('prisma')], ['PostgreSQL', S('postgres')]]],
   ],
   [
-    ['Nube', 'blue', [['AWS', S('aws')], ['Azure', S('azure')], ['Google Cloud', S('gcp')], ['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')], ['Actions', S('githubactions')], ['Git', S('git')]]],
+    ['Nube', 'blue', [['AWS', S('aws')], ['Azure', S('azure')], ['Google Cloud', S('gcp')], ['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')]]],
+    ['Power Platform', 'violet', [['Power Apps', I('arcticons:microsoft-power-apps', { color: '#a33bbd', stroke: 3 })], ['Power Automate', I('selfhst:microsoft-power-automate')], ['Power BI', I('logos:microsoft-power-bi')]]],
+  ],
+  [
+    ['Servidores, Linux y DevOps', 'teal', [['Linux', S('linux')], ['Ubuntu', S('ubuntu')], ['Debian', S('debian')], ['Red Hat', S('redhat')], ['Docker', S('docker')], ['Nginx', S('nginx')], ['Bash', S('bash')], ['Git', S('git')], ['Actions', S('githubactions')]]],
   ],
   [
     ['Visión artificial', 'copper', [['OpenCV', S('opencv')], ['YOLO', I('simple-icons:ultralytics', { color: { dark: '#5b8cff', light: '#111f68' } })], ['PyTorch', S('pytorch')], ['Living Optics', { custom: SPECTRAL, pad: 0 }]]],
@@ -214,7 +218,6 @@ const STACK = [
   ],
   [
     ['Automatización industrial', 'gold', [['Siemens PLC', I('simple-icons:siemens', { color: '#009999', pad: 14 })], ['Schneider', { url: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/schneiderelectric.svg', fill: '#3dcd58' }], ['Node-RED', I('devicon:nodered')], ['MQTT', I('simple-icons:mqtt', { color: { dark: '#c58cd8', light: '#660066' } })], ['Raspberry Pi', S('raspberrypi')], ['Arduino', S('arduino')]]],
-    ['Power Platform', 'violet', [['Power Apps', I('arcticons:microsoft-power-apps', { color: '#a33bbd', stroke: 3 })], ['Power Automate', I('selfhst:microsoft-power-automate')], ['Power BI', I('logos:microsoft-power-bi')]]],
   ],
   [
     ['Automatización', 'blue', [['Selenium', S('selenium')], ['Playwright', I('logos:playwright')], ['n8n', I('logos:n8n-icon')], ['Zapier', I('logos:zapier-icon')], ['UiPath', I('simple-icons:uipath', { color: '#fa4616' })], ['PowerShell', S('powershell')]]],
@@ -269,7 +272,7 @@ async function stack(t, theme) {
   const cell = 96;
   const tile = 52;
   const gap = 40;
-  const rowH = 128;
+  const rowH = 118;
   let k = 0;
   const rows = [];
   for (const [r, groups] of STACK.entries()) {
