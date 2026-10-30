@@ -20,12 +20,12 @@ Soy ingeniero de minas y metalurgia y programo porque me gusta construir mis pro
 Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle trabajo manual a los procesos y usar la inteligencia artificial donde de verdad aporta.
 
 - Hago crecer **[MineLab](https://github.com/argenismarin/MineLab)**, una librería de Python para ingeniería minera publicada en PyPI
-- Construyo PWAs con Cloudflare Workers, D1 y notificaciones push
+- Diseño apps multientorno que corren en web, Windows, macOS, Linux, Android e iOS desde una sola base de código
 - Manejo servidores Linux a nivel avanzado, desde la configuración y la seguridad hasta el despliegue de servicios con Docker y Nginx
 - Trabajo con cámaras hiperespectrales y multiespectrales de Living Optics y diseño funciones de machine learning para analizar lo que capturan
 - He trabajado con equipos Schneider Electric en estaciones eléctricas y conecto PLC, sensores y tableros en proyectos de automatización industrial
-- Diseño apps, flujos y tableros con Power Apps, Power Automate y Power BI
-- Integro IA en flujos reales, como asistentes con RAG y lectura de facturas con OCR
+- Construyo apps, flujos y tableros con Power Apps, Power Automate y Power BI
+- Llevo la IA a la operación real, con asistentes RAG que capacitan equipos y responden con el conocimiento técnico de la empresa, y modelos de visión que convierten lo que ve una cámara en decisiones
 - Automatizo registros, certificados y formularios para que nadie tenga que hacerlos a mano
 
 ## Proyectos destacados
