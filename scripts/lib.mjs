@@ -98,12 +98,35 @@ export function pill(x, y, label, color, t, { size = 13, charW = 7.4, pad = 12, 
   return { svg, w };
 }
 
+// Parte un texto en líneas de como máximo `max` caracteres
+export function wrap(text, max) {
+  const lines = [];
+  let cur = '';
+  for (const word of text.split(' ')) {
+    if ((cur + ' ' + word).trim().length > max) {
+      lines.push(cur);
+      cur = word;
+    } else cur = (cur + ' ' + word).trim();
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
 // Íconos de 24 px dibujados con trazos
 export const ICONS = {
   pick: (c) =>
     `<path d="M3 21 L16 8" stroke="${c}" stroke-width="2.4" stroke-linecap="round"/><path d="M8 2 Q22 2.5 22.5 16.5 Q18 6.5 8 2 Z" fill="${c}" stroke="${c}" stroke-width="1.2" stroke-linejoin="round"/>`,
   drill: (c) =>
     `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M8 3h8v5H8z"/><path d="M10 8v4l2 9 2-9V8"/><path d="M10.5 13.5l3-1.5M10.8 16.5l2.6-1.3"/></g>`,
+  eye: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3.2"/></g>`,
+  bolt: (c) => `<path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`,
+  spark: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round"><path d="M12 2v5M12 17v5M2 12h5M17 12h5M5 5l3.2 3.2M15.8 15.8L19 19M5 19l3.2-3.2M15.8 8.2L19 5"/><circle cx="12" cy="12" r="2.2"/></g>`,
+  devices: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h14v10H2z"/><path d="M6 18h6M9 14v4"/><path d="M18 8h4v12h-4z"/></g>`,
+  server: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3h18v7H3zM3 14h18v7H3z"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></g>`,
   star: (c) =>
     `<path d="M12 2.5l2.8 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.2l-6.1 3.6 1.6-6.8-5.2-4.6 6.9-.6z" fill="${c}"/>`,
 };

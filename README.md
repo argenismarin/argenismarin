@@ -15,26 +15,23 @@
 
 ## Sobre mí
 
-Soy ingeniero de minas y metalurgia y programo porque me gusta construir mis propias herramientas. Empecé automatizando tareas repetitivas con Python y hoy desarrollo aplicaciones web completas, desde la base de datos hasta la interfaz que usa la gente.
+Soy ingeniero de minas y metalurgia y construyo la tecnología con la que la industria opera mejor. Mi trabajo está donde se cruzan la ingeniería, el software y la inteligencia artificial, desde una cámara hiperespectral o un PLC en una estación eléctrica hasta la app que usa la gente y el servidor que la sostiene.
 
-Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle trabajo manual a los procesos y usar la inteligencia artificial donde de verdad aporta.
+**Si un proceso se puede medir, se puede automatizar. Y si se puede automatizar, se puede hacer más inteligente.**
 
-- Hago crecer **[MineLab](https://github.com/argenismarin/MineLab)**, una librería de Python para ingeniería minera publicada en PyPI
-- Diseño apps multientorno que corren en web, Windows, macOS, Linux, Android e iOS desde una sola base de código
-- Manejo servidores Linux a nivel avanzado, desde la configuración y la seguridad hasta el despliegue de servicios con Docker y Nginx
-- Trabajo con cámaras hiperespectrales y multiespectrales de Living Optics y diseño funciones de machine learning para analizar lo que capturan
-- He trabajado con equipos Schneider Electric en estaciones eléctricas y conecto PLC, sensores y tableros en proyectos de automatización industrial
-- Construyo apps, flujos y tableros con Power Apps, Power Automate y Power BI
-- Llevo la IA a la operación real, con asistentes RAG que capacitan equipos y responden con el conocimiento técnico de la empresa, y modelos de visión que convierten lo que ve una cámara en decisiones
-- Automatizo registros, certificados y formularios para que nadie tenga que hacerlos a mano
+## Áreas de impacto
 
-## Proyectos destacados
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/areas-dark.svg?v=1"><img alt="Seis áreas de impacto. Ingeniería que se programa, con cálculos de minería y metalurgia en código validado como MineLab. Visión artificial e hiperespectral con cámaras de Living Optics, OpenCV, YOLO y machine learning. Automatización industrial con PLC Siemens, equipos Schneider Electric en estaciones eléctricas, MQTT y Node-RED. IA en la operación con asistentes RAG y modelos de visión. Apps multientorno para web, Windows, macOS, Linux, Android e iOS. Infraestructura con servidores Linux, AWS, Azure, Google Cloud y contenedores." src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/areas-light.svg?v=1" width="100%"></picture>
+
+## Proyecto insignia
+
+<a href="https://github.com/argenismarin/MineLab"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/minelab-dark.svg"><img alt="MineLab, librería de Python para ingeniería de minas con 388 funciones, 16 módulos, 897 tests y 94 por ciento de cobertura" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/minelab-light.svg" width="100%"></picture></a>
+
+## Otros proyectos
 
 <p align="center">
-  <a href="https://github.com/argenismarin/MineLab"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-minelab-dark.svg"><img alt="MineLab" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-minelab-light.svg" width="49%"></picture></a>
   <a href="https://github.com/argenismarin/FinanzasApp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-finanzasapp-dark.svg"><img alt="FinanzasApp" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-finanzasapp-light.svg" width="49%"></picture></a>
   <a href="https://github.com/argenismarin/Registros-Semana-Mineria"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-registros-semana-mineria-dark.svg"><img alt="Registros Semana de la Minería" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-registros-semana-mineria-light.svg" width="49%"></picture></a>
-  <a href="https://github.com/argenismarin/amor-compartido"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-amor-compartido-dark.svg"><img alt="Amor Compartido" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-amor-compartido-light.svg" width="49%"></picture></a>
 </p>
 
 ## Con qué trabajo

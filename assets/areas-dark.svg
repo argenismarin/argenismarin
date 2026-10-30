@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 474" width="1000" height="474" role="img" aria-label="Áreas de impacto">
+  <style>
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise 0.7s ease-out both; }
+  </style>
+  <rect x="0.5" y="0.5" width="999" height="473" rx="16" fill="#0f172a" stroke="#24314d"/>
+  <g transform="translate(28 28)"><g class="rise" style="animation-delay:0.10s">
+      <rect width="302.6666666666667" height="200" rx="14" fill="#f2994a" fill-opacity="0.06" stroke="#f2994a" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="#f2994a"/>
+      <g transform="translate(20 24) scale(1.6)"><path d="M3 21 L16 8" stroke="#f2994a" stroke-width="2.4" stroke-linecap="round"/><path d="M8 2 Q22 2.5 22.5 16.5 Q18 6.5 8 2 Z" fill="#f2994a" stroke="#f2994a" stroke-width="1.2" stroke-linejoin="round"/></g>
+      <text x="280.6666666666667" y="40" text-anchor="end" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">01</text>
+      <text x="22" y="98" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Ingeniería que se programa</text>
+      <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">Convierto los cálculos de minería y</text><text x="22" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">metalurgia en código validado, con</text><text x="22" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">pruebas y referencias, como en MineLab.</text>
+    </g></g><g transform="translate(348.6666666666667 28)"><g class="rise" style="animation-delay:0.19s">
+      <rect width="302.6666666666667" height="200" rx="14" fill="#a78bfa" fill-opacity="0.06" stroke="#a78bfa" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="#a78bfa"/>
+      <g transform="translate(20 24) scale(1.6)"><g fill="none" stroke="#a78bfa" stroke-width="2" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3.2"/></g></g>
+      <text x="280.6666666666667" y="40" text-anchor="end" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">02</text>
+      <text x="22" y="98" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Visión artificial e hiperespectral</text>
+      <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">Cámaras hiperespectrales y</text><text x="22" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">multiespectrales de Living Optics, OpenCV</text><text x="22" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">y YOLO, con funciones de machine learning</text><text x="22" y="186" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">a la medida.</text>
+    </g></g><g transform="translate(669.3333333333334 28)"><g class="rise" style="animation-delay:0.28s">
+      <rect width="302.6666666666667" height="200" rx="14" fill="#f2c94c" fill-opacity="0.06" stroke="#f2c94c" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="#f2c94c"/>
+      <g transform="translate(20 24) scale(1.6)"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="#f2c94c" stroke-width="2" stroke-linejoin="round"/></g>
+      <text x="280.6666666666667" y="40" text-anchor="end" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">03</text>
+      <text x="22" y="98" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Automatización industrial</text>
+      <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">PLC Siemens, equipos Schneider Electric</text><text x="22" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">en estaciones eléctricas y sensores</text><text x="22" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">conectados con MQTT y Node-RED.</text>
+    </g></g><g transform="translate(28 246)"><g class="rise" style="animation-delay:0.37s">
+      <rect width="302.6666666666667" height="200" rx="14" fill="#2dd4bf" fill-opacity="0.06" stroke="#2dd4bf" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="#2dd4bf"/>
+      <g transform="translate(20 24) scale(1.6)"><g fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linecap="round"><path d="M12 2v5M12 17v5M2 12h5M17 12h5M5 5l3.2 3.2M15.8 15.8L19 19M5 19l3.2-3.2M15.8 8.2L19 5"/><circle cx="12" cy="12" r="2.2"/></g></g>
+      <text x="280.6666666666667" y="40" text-anchor="end" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">04</text>
+      <text x="22" y="98" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">IA en la operación</text>
+      <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">Asistentes RAG que capacitan equipos y</text><text x="22" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">modelos de visión que convierten lo que</text><text x="22" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">ve una cámara en decisiones.</text>
+    </g></g><g transform="translate(348.6666666666667 246)"><g class="rise" style="animation-delay:0.46s">
+      <rect width="302.6666666666667" height="200" rx="14" fill="#60a5fa" fill-opacity="0.06" stroke="#60a5fa" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="#60a5fa"/>
+      <g transform="translate(20 24) scale(1.6)"><g fill="none" stroke="#60a5fa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h14v10H2z"/><path d="M6 18h6M9 14v4"/><path d="M18 8h4v12h-4z"/></g></g>
+      <text x="280.6666666666667" y="40" text-anchor="end" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">05</text>
+      <text x="22" y="98" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Apps multientorno</text>
+      <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">Una sola base de código para web,</text><text x="22" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">Windows, macOS, Linux, Android e iOS, del</text><text x="22" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">backend a la interfaz.</text>
+    </g></g><g transform="translate(669.3333333333334 246)"><g class="rise" style="animation-delay:0.55s">
+      <rect width="302.6666666666667" height="200" rx="14" fill="#f2994a" fill-opacity="0.06" stroke="#f2994a" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="#f2994a"/>
+      <g transform="translate(20 24) scale(1.6)"><g fill="none" stroke="#f2994a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3h18v7H3zM3 14h18v7H3z"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></g></g>
+      <text x="280.6666666666667" y="40" text-anchor="end" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">06</text>
+      <text x="22" y="98" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Infraestructura</text>
+      <text x="22" y="126" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">Servidores Linux a nivel avanzado, nube</text><text x="22" y="146" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">en AWS, Azure y Google Cloud,</text><text x="22" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#e6edf3" fill-opacity="0.78">contenedores y despliegue continuo.</text>
+    </g></g>
+</svg>

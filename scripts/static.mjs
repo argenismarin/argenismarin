@@ -1,6 +1,6 @@
 // Genera el encabezado y el pie animados en assets/
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { THEMES, SANS, MONO, esc, wavePath, contourPath, pill, ICONS } from './lib.mjs';
+import { THEMES, SANS, MONO, esc, wavePath, contourPath, pill, wrap, ICONS } from './lib.mjs';
 
 const W = 1200;
 const PHRASES = [
@@ -309,10 +309,54 @@ async function stack(t, theme) {
 `;
 }
 
+const AREAS = [
+  ['pick', 'copper', 'Ingeniería que se programa', 'Convierto los cálculos de minería y metalurgia en código validado, con pruebas y referencias, como en MineLab.'],
+  ['eye', 'violet', 'Visión artificial e hiperespectral', 'Cámaras hiperespectrales y multiespectrales de Living Optics, OpenCV y YOLO, con funciones de machine learning a la medida.'],
+  ['bolt', 'gold', 'Automatización industrial', 'PLC Siemens, equipos Schneider Electric en estaciones eléctricas y sensores conectados con MQTT y Node-RED.'],
+  ['spark', 'teal', 'IA en la operación', 'Asistentes RAG que capacitan equipos y modelos de visión que convierten lo que ve una cámara en decisiones.'],
+  ['devices', 'blue', 'Apps multientorno', 'Una sola base de código para web, Windows, macOS, Linux, Android e iOS, del backend a la interfaz.'],
+  ['server', 'copper', 'Infraestructura', 'Servidores Linux a nivel avanzado, nube en AWS, Azure y Google Cloud, contenedores y despliegue continuo.'],
+];
+
+// Seis áreas de trabajo en una cuadrícula de 3 por 2
+function areas(t) {
+  const AW = 1000;
+  const pad = 28;
+  const gap = 18;
+  const tw = (AW - pad * 2 - gap * 2) / 3;
+  const th = 200;
+  const AH = pad * 2 + th * 2 + gap;
+  const tiles = AREAS.map(([icon, color, title, text], i) => {
+    const x = pad + (i % 3) * (tw + gap);
+    const y = pad + Math.floor(i / 3) * (th + gap);
+    const lines = wrap(text, 41)
+      .map((line, k) => `<text x="22" y="${126 + k * 20}" font-family="${SANS}" font-size="13.5" fill="${t.text}" fill-opacity="0.78">${esc(line)}</text>`)
+      .join('');
+    return `<g transform="translate(${x} ${y})"><g class="rise" style="animation-delay:${(0.1 + i * 0.09).toFixed(2)}s">
+      <rect width="${tw}" height="${th}" rx="14" fill="${t[color]}" fill-opacity="0.06" stroke="${t[color]}" stroke-opacity="0.35"/>
+      <rect x="22" y="0" width="56" height="3" rx="1.5" fill="${t[color]}"/>
+      <g transform="translate(20 24) scale(1.6)">${ICONS[icon](t[color])}</g>
+      <text x="${tw - 22}" y="40" text-anchor="end" font-family="${MONO}" font-size="12" fill="${t.muted}">${String(i + 1).padStart(2, '0')}</text>
+      <text x="22" y="98" font-family="${SANS}" font-size="18" font-weight="700" fill="${t.text}">${esc(title)}</text>
+      ${lines}
+    </g></g>`;
+  }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${AW} ${AH}" width="${AW}" height="${AH}" role="img" aria-label="Áreas de impacto">
+  <style>
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise 0.7s ease-out both; }
+  </style>
+  <rect x="0.5" y="0.5" width="${AW - 1}" height="${AH - 1}" rx="16" fill="${t.card}" stroke="${t.border}"/>
+  ${tiles}
+</svg>
+`;
+}
+
 mkdirSync(new URL('../assets/', import.meta.url), { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(new URL(`../assets/header-${name}.svg`, import.meta.url), header(t));
   writeFileSync(new URL(`../assets/footer-${name}.svg`, import.meta.url), footer(t));
   writeFileSync(new URL(`../assets/stack-${name}.svg`, import.meta.url), await stack(t, name));
+  writeFileSync(new URL(`../assets/areas-${name}.svg`, import.meta.url), areas(t));
 }
 console.log('assets listos');

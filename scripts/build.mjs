@@ -1,18 +1,11 @@
 // Consulta GitHub y genera las tarjetas con datos en dist/
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { THEMES, SANS, MONO, esc, fmt, monthYear, shine, pill, ICONS } from './lib.mjs';
+import { THEMES, SANS, MONO, esc, fmt, monthYear, shine, pill, wrap, ICONS } from './lib.mjs';
 
 const LOGIN = process.env.PROFILE_LOGIN || 'argenismarin';
 const TOKEN = process.env.GITHUB_TOKEN;
 
 const FEATURED = [
-  {
-    repo: 'MineLab',
-    accent: 'copper',
-    initials: 'ML',
-    text: 'Librería de Python para ingeniería de minas con 388 funciones en 16 módulos, 897 tests y la referencia bibliográfica de cada fórmula.',
-    tags: ['PyPI', 'Geomecánica', 'Voladura', 'Geoestadística'],
-  },
   {
     repo: 'FinanzasApp',
     accent: 'teal',
@@ -26,13 +19,6 @@ const FEATURED = [
     initials: 'RS',
     text: 'Registro de asistentes para eventos con códigos QR, escarapelas en PDF y sincronización en vivo con Google Sheets.',
     tags: ['Next.js', 'Socket.io', 'QR'],
-  },
-  {
-    repo: 'amor-compartido',
-    accent: 'violet',
-    initials: 'AC',
-    text: 'PWA para compartir tareas en pareja con proyectos, rachas, logros y notificaciones push reales.',
-    tags: ['Next.js 16', 'PWA', 'Web Push'],
   },
 ];
 
@@ -240,18 +226,6 @@ function langsCard(t, s) {
   return frame(t, W, H, body, 'Lenguajes más usados');
 }
 
-function wrap(text, max) {
-  const lines = [];
-  let cur = '';
-  for (const word of text.split(' ')) {
-    if ((cur + ' ' + word).trim().length > max) {
-      lines.push(cur);
-      cur = word;
-    } else cur = (cur + ' ' + word).trim();
-  }
-  if (cur) lines.push(cur);
-  return lines;
-}
 
 function projectCard(t, f, repo) {
   const W = 500;
@@ -293,7 +267,131 @@ function projectCard(t, f, repo) {
   return frame(t, W, H, body, repo.name);
 }
 
+const CODE = [
+  'import minelab as ml',
+  '',
+  '# Economía minera, VAN del proyecto',
+  'van = ml.npv(rate=0.10,',
+  '    cashflows=[-100_000, 30_000, 45_000])',
+  '',
+  '# Voladura, fragmentación Kuz-Ram',
+  'x50 = ml.kuz_ram_x50(powder_factor=0.5,',
+  '    rock_factor=8.0, charge_weight=150.0)',
+  '',
+  '# Procesamiento, recuperación por flotación',
+  'rec = ml.flotation_recovery(feed_grade=1.2,',
+  '    concentrate_grade=28.0, tail_grade=0.15)',
+];
+
+const MODULES = [
+  'utilities', 'geostatistics', 'mine_planning', 'geomechanics', 'mineral_processing', 'equipment',
+  'drilling_blasting', 'ventilation', 'economics', 'environmental', 'production',
+  'resource_classification', 'data_management', 'underground_mining', 'hydrogeology', 'surveying',
+];
+
+// Resaltado sencillo de Python para la ventana de código
+const SYNTAX = { kw: '#c792ea', fn: '#82aaff', num: '#f78c6c', cm: '#6f7f99', tx: '#e6edf3' };
+function highlight(line) {
+  if (line.trim().startsWith('#')) return `<tspan fill="${SYNTAX.cm}">${esc(line)}</tspan>`;
+  return line
+    .split(/(\bimport\b|\bas\b|[A-Za-z_][A-Za-z0-9_]*(?=\()|(?<![A-Za-z0-9_])-?\d[\d_]*\.?\d*)/)
+    .filter(Boolean)
+    .map((tok) => {
+      const color = /^(import|as)$/.test(tok) ? SYNTAX.kw : /^[A-Za-z_][A-Za-z0-9_]*$/.test(tok) && line.includes(`${tok}(`) ? SYNTAX.fn : /^-?\d/.test(tok) ? SYNTAX.num : SYNTAX.tx;
+      return `<tspan fill="${color}">${esc(tok)}</tspan>`;
+    })
+    .join('');
+}
+
+function spotlight(t, repo, version) {
+  const W = 1000;
+  const H = 420;
+  const stats = [
+    ['388', 'funciones'],
+    ['16', 'módulos'],
+    ['897', 'tests'],
+    ['94%', 'cobertura'],
+  ]
+    .map(([n, label], i) => {
+      const x = 36 + (i % 2) * 210;
+      const y = 214 + Math.floor(i / 2) * 64;
+      return `<g transform="translate(${x} ${y})"><g class="rise" style="animation-delay:${(0.2 + i * 0.1).toFixed(2)}s">
+        <text font-family="${SANS}" font-size="38" font-weight="800" fill="url(#num)">${n}</text>
+        <text x="${[...n].reduce((a, c) => a + (c === '%' ? 33 : 22), 10)}" font-family="${SANS}" font-size="15" fill="${t.muted}">${label}</text>
+      </g></g>`;
+    })
+    .join('');
+
+  let px = 36;
+  const pills = [
+    [`PyPI v${version}`, t.copper],
+    [`${fmt(repo.stargazerCount)} estrellas`, t.gold],
+    ['Python 3.10+', t.teal],
+    ['MIT', t.violet],
+  ]
+    .map(([label, color]) => {
+      const p = pill(px, 334, label, color, t, { size: 13, charW: 7.4, pad: 11 });
+      px += p.w + 8;
+      return p.svg;
+    })
+    .join('');
+
+  const cx = 512;
+  const cw = W - cx - 36;
+  const code = CODE.map(
+    (line, i) =>
+      `<text x="${cx + 22}" y="${96 + i * 19.5}" font-family="${MONO}" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:${(0.3 + i * 0.07).toFixed(2)}s">${highlight(line)}</text>`,
+  ).join('');
+
+  const ticker = MODULES.join('   ·   ') + '   ·   ';
+  const tw = ticker.length * 7.8;
+  const tick = [0, tw]
+    .map((x) => `<text x="${x}" y="0" font-family="${MONO}" font-size="13" fill="${t.muted}" textLength="${tw.toFixed(1)}" lengthAdjust="spacingAndGlyphs" xml:space="preserve">${esc(ticker)}</text>`)
+    .join('');
+
+  const body = `
+  <defs>
+    <linearGradient id="num" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="${t.copper}"/>
+      <stop offset="1" stop-color="${t.gold}"/>
+    </linearGradient>
+    <linearGradient id="emb" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="${t.copper}"/>
+      <stop offset="1" stop-color="${t.gold}"/>
+    </linearGradient>
+    <clipPath id="tick"><rect x="1" y="378" width="${W - 2}" height="40"/></clipPath>
+  </defs>
+  <rect x="36" y="36" width="60" height="60" rx="16" fill="url(#emb)"/>
+  <g transform="translate(48 48) scale(1.5)">${ICONS.pick(t.card)}</g>
+  <text x="112" y="66" font-family="${SANS}" font-size="34" font-weight="800" fill="${t.text}">MineLab</text>
+  <text x="114" y="90" font-family="${MONO}" font-size="13" fill="${t.muted}">pip install minelab</text>
+  <text x="36" y="140" font-family="${SANS}" font-size="18" fill="${t.text}" fill-opacity="0.88">La caja de herramientas de Python que todo</text>
+  <text x="36" y="166" font-family="${SANS}" font-size="18" fill="${t.text}" fill-opacity="0.88">ingeniero de minas merece tener.</text>
+  ${stats}
+  ${pills}
+
+  <rect x="${cx}" y="36" width="${cw}" height="324" rx="12" fill="#0b1020" stroke="${t.border}"/>
+  <path d="M${cx} 48a12 12 0 0 1 12-12h${cw - 24}a12 12 0 0 1 12 12v18H${cx}z" fill="#141b2e"/>
+  <circle cx="${cx + 20}" cy="51" r="5" fill="#ff5f57"/><circle cx="${cx + 38}" cy="51" r="5" fill="#febc2e"/><circle cx="${cx + 56}" cy="51" r="5" fill="#28c840"/>
+  <text x="${cx + cw / 2}" y="55" text-anchor="middle" font-family="${MONO}" font-size="12" fill="#8b98ab">inicio_rapido.py</text>
+  ${code}
+  <rect x="${(cx + 24 + CODE.at(-1).length * 12.8 * 0.56).toFixed(1)}" y="${96 + (CODE.length - 1) * 19.5 - 13}" width="8" height="16" fill="${t.copper}" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="1.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <line x1="0" x2="${W}" y1="378" y2="378" stroke="${t.border}"/>
+  <g clip-path="url(#tick)"><g transform="translate(0 404)">
+    <g>${tick}<animateTransform attributeName="transform" type="translate" values="0 0;-${tw.toFixed(1)} 0" dur="60s" repeatCount="indefinite"/></g>
+  </g></g>`;
+
+  return frame(t, W, H, body, 'MineLab, librería de Python para ingeniería de minas');
+}
+
 const user = await fetchData();
+const pypi = await fetch('https://pypi.org/pypi/minelab/json')
+  .then((r) => r.json())
+  .then((d) => d.info.version)
+  .catch(() => null);
 const s = summarize(user);
 const updated = new Date().toISOString().slice(0, 10);
 const out = new URL('../dist/', import.meta.url);
@@ -302,6 +400,8 @@ mkdirSync(out, { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(new URL(`stats-${name}.svg`, out), statsCard(t, s, updated));
   writeFileSync(new URL(`langs-${name}.svg`, out), langsCard(t, s));
+  const minelab = s.repos.get('MineLab');
+  if (minelab && pypi) writeFileSync(new URL(`minelab-${name}.svg`, out), spotlight(t, minelab, pypi));
   for (const f of FEATURED) {
     const repo = s.repos.get(f.repo);
     if (!repo) {
