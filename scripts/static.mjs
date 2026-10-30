@@ -4,11 +4,12 @@ import { THEMES, SANS, MONO, esc, wavePath, contourPath, pill, wrap, ICONS } fro
 
 const W = 1200;
 const PHRASES = [
+  'Programador Full Stack',
   'Ingeniero de Minas y Metalurgia',
-  'Desarrollador full-stack',
-  'Visión artificial',
-  'Automatización industrial',
-  'IA aplicada a problemas reales',
+  'Científico de Datos',
+  'Modelamiento estocástico',
+  'Machine learning e IIoT',
+  'Redes e infraestructura',
 ];
 
 const STRATA = [
@@ -113,10 +114,10 @@ function header(t) {
   const cy = 180;
   let px = 72;
   const pills = [
-    ['Minería y metalurgia', t.copper],
-    ['Visión artificial', t.gold],
-    ['Automatización industrial', t.teal],
-    ['IA aplicada', t.violet],
+    ['Full Stack', t.copper],
+    ['Ciencia de datos', t.gold],
+    ['Machine learning', t.teal],
+    ['IIoT', t.violet],
   ]
     .map(([label, color]) => {
       const p = pill(px, 280, label, color, t);
@@ -206,21 +207,21 @@ const STACK = [
     ['Web y backend', 'teal', [['Next.js', S('nextjs')], ['React', S('react')], ['Node.js', S('nodejs')], ['Express', S('express')], ['Tailwind', S('tailwind')], ['Socket.io', I('devicon:socketio', { dark: '#010101' })], ['Prisma', S('prisma')], ['PostgreSQL', S('postgres')]]],
   ],
   [
+    ['Ciencia de datos y machine learning', 'gold', [['Jupyter', I('devicon:jupyter')], ['NumPy', I('devicon:numpy')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['SciPy', { url: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/scipy.svg', fill: '#8caae6' }], ['scikit-learn', S('sklearn')], ['TensorFlow', S('tensorflow')], ['PyTorch', S('pytorch')], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
+  ],
+  [
+    ['Visión artificial', 'violet', [['OpenCV', S('opencv')], ['YOLO', I('simple-icons:ultralytics', { color: { dark: '#5b8cff', light: '#111f68' } })], ['Living Optics', { custom: SPECTRAL, pad: 0 }]]],
+    ['IIoT y automatización industrial', 'gold', [['Siemens PLC', I('simple-icons:siemens', { color: '#009999', pad: 14 })], ['Schneider', { url: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/schneiderelectric.svg', fill: '#3dcd58' }], ['Node-RED', I('devicon:nodered')], ['MQTT', I('simple-icons:mqtt', { color: { dark: '#c58cd8', light: '#660066' } })], ['Raspberry Pi', S('raspberrypi')], ['Arduino', S('arduino')]]],
+  ],
+  [
+    ['Redes, servidores y DevOps', 'teal', [['Linux', S('linux')], ['Ubuntu', S('ubuntu')], ['Debian', S('debian')], ['Red Hat', S('redhat')], ['Docker', S('docker')], ['Nginx', S('nginx')], ['Bash', S('bash')], ['Git', S('git')], ['Actions', S('githubactions')]]],
+  ],
+  [
     ['Nube', 'blue', [['AWS', S('aws')], ['Azure', S('azure')], ['Google Cloud', S('gcp')], ['Cloudflare', S('cloudflare')], ['Workers', S('workers')], ['Vercel', S('vercel')]]],
     ['Power Platform', 'violet', [['Power Apps', I('arcticons:microsoft-power-apps', { color: '#a33bbd', stroke: 3 })], ['Power Automate', I('selfhst:microsoft-power-automate')], ['Power BI', I('logos:microsoft-power-bi')]]],
   ],
   [
-    ['Servidores, Linux y DevOps', 'teal', [['Linux', S('linux')], ['Ubuntu', S('ubuntu')], ['Debian', S('debian')], ['Red Hat', S('redhat')], ['Docker', S('docker')], ['Nginx', S('nginx')], ['Bash', S('bash')], ['Git', S('git')], ['Actions', S('githubactions')]]],
-  ],
-  [
-    ['Visión artificial', 'copper', [['OpenCV', S('opencv')], ['YOLO', I('simple-icons:ultralytics', { color: { dark: '#5b8cff', light: '#111f68' } })], ['PyTorch', S('pytorch')], ['Living Optics', { custom: SPECTRAL, pad: 0 }]]],
-    ['Datos y machine learning', 'teal', [['Jupyter', I('devicon:jupyter')], ['pandas', I('devicon:pandas', { dark: '#130754' })], ['scikit-learn', S('sklearn')], ['TensorFlow', S('tensorflow')], ['OpenAI', I('logos:openai-icon', { dark: 'root' })]]],
-  ],
-  [
-    ['Automatización industrial', 'gold', [['Siemens PLC', I('simple-icons:siemens', { color: '#009999', pad: 14 })], ['Schneider', { url: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/schneiderelectric.svg', fill: '#3dcd58' }], ['Node-RED', I('devicon:nodered')], ['MQTT', I('simple-icons:mqtt', { color: { dark: '#c58cd8', light: '#660066' } })], ['Raspberry Pi', S('raspberrypi')], ['Arduino', S('arduino')]]],
-  ],
-  [
-    ['Automatización', 'blue', [['Selenium', S('selenium')], ['Playwright', I('logos:playwright')], ['n8n', I('logos:n8n-icon')], ['Zapier', I('logos:zapier-icon')], ['UiPath', I('simple-icons:uipath', { color: '#fa4616' })], ['PowerShell', S('powershell')]]],
+    ['Automatización', 'copper', [['Selenium', S('selenium')], ['Playwright', I('logos:playwright')], ['n8n', I('logos:n8n-icon')], ['Zapier', I('logos:zapier-icon')], ['UiPath', I('simple-icons:uipath', { color: '#fa4616' })], ['PowerShell', S('powershell')]]],
   ],
 ];
 
@@ -310,22 +311,26 @@ async function stack(t, theme) {
 }
 
 const AREAS = [
-  ['pick', 'copper', 'Ingeniería que se programa', 'Convierto los cálculos de minería y metalurgia en código validado, con pruebas y referencias, como en MineLab.'],
+  ['devices', 'blue', 'Full stack multientorno', 'Apps para web, Windows, macOS, Linux, Android e iOS desde una sola base de código, del backend a la interfaz.'],
+  ['chart', 'gold', 'Ciencia de datos', 'Análisis, modelos y tableros que convierten los datos de la operación en decisiones medibles.'],
+  ['bell', 'copper', 'Modelamiento estocástico', 'Procesos estocásticos, simulación Monte Carlo y geoestadística para medir riesgo e incertidumbre, llevados a aplicaciones.'],
+  ['spark', 'teal', 'Machine learning', 'Modelos de clasificación, regresión y visión, desde el diseño de funciones hasta el despliegue en producción.'],
   ['eye', 'violet', 'Visión artificial e hiperespectral', 'Cámaras hiperespectrales y multiespectrales de Living Optics, OpenCV y YOLO, con funciones de machine learning a la medida.'],
-  ['bolt', 'gold', 'Automatización industrial', 'PLC Siemens, equipos Schneider Electric en estaciones eléctricas y sensores conectados con MQTT y Node-RED.'],
-  ['spark', 'teal', 'IA en la operación', 'Asistentes RAG que capacitan equipos y modelos de visión que convierten lo que ve una cámara en decisiones.'],
-  ['devices', 'blue', 'Apps multientorno', 'Una sola base de código para web, Windows, macOS, Linux, Android e iOS, del backend a la interfaz.'],
-  ['server', 'copper', 'Infraestructura', 'Servidores Linux a nivel avanzado, nube en AWS, Azure y Google Cloud, contenedores y despliegue continuo.'],
+  ['bolt', 'gold', 'IIoT y automatización industrial', 'Sensores conectados con MQTT y Node-RED, PLC Siemens y equipos Schneider Electric en estaciones eléctricas.'],
+  ['network', 'blue', 'Redes e infraestructura', 'Redes, servidores Linux a nivel avanzado y nube en AWS, Azure y Google Cloud, con contenedores y despliegue continuo.'],
+  ['pick', 'copper', 'Ingeniería que se programa', 'Convierto los cálculos de minería y metalurgia en código validado, con pruebas y referencias, como en MineLab.'],
+  ['chat', 'teal', 'IA en la operación', 'Asistentes RAG que capacitan equipos y modelos de visión que convierten lo que ve una cámara en decisiones.'],
 ];
 
-// Seis áreas de trabajo en una cuadrícula de 3 por 2
+// Áreas de trabajo en una cuadrícula de 3 columnas
 function areas(t) {
   const AW = 1000;
   const pad = 28;
   const gap = 18;
   const tw = (AW - pad * 2 - gap * 2) / 3;
   const th = 200;
-  const AH = pad * 2 + th * 2 + gap;
+  const rows = Math.ceil(AREAS.length / 3);
+  const AH = pad * 2 + th * rows + gap * (rows - 1);
   const tiles = AREAS.map(([icon, color, title, text], i) => {
     const x = pad + (i % 3) * (tw + gap);
     const y = pad + Math.floor(i / 3) * (th + gap);

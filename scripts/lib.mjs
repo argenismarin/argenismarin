@@ -127,6 +127,14 @@ export const ICONS = {
     `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 4h14v10H2z"/><path d="M6 18h6M9 14v4"/><path d="M18 8h4v12h-4z"/></g>`,
   server: (c) =>
     `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 3h18v7H3zM3 14h18v7H3z"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></g>`,
+  chart: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16v-4M11.5 16V8M16 16v-6M20 16V5"/></g>`,
+  bell: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M2 19.5c3.5 0 4.5-6.5 6.5-10.5S11 4.5 12 4.5s2 1 3.5 4.5 3 10.5 6.5 10.5"/><circle cx="7" cy="16" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="15.5" cy="15" r="1"/></g>`,
+  network: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M10.8 7.2l-4.6 9.6M13.2 7.2l4.6 9.6M7.5 19h9"/></g>`,
+  chat: (c) =>
+    `<g fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M4 4h16v11H10l-5 4.5V15H4z"/><path d="M8 8.5h8M8 11.5h5"/></g>`,
   star: (c) =>
     `<path d="M12 2.5l2.8 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.2l-6.1 3.6 1.6-6.8-5.2-4.6 6.9-.6z" fill="${c}"/>`,
 };

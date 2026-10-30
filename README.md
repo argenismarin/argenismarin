@@ -1,7 +1,7 @@
 <a href="https://github.com/argenismarin">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/header-dark.svg">
-    <img alt="Argenis Marin, ingeniero de minas y desarrollador" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/header-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/header-dark.svg?v=2">
+    <img alt="Argenis Marin, ingeniero de minas y desarrollador" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/header-light.svg?v=2" width="100%">
   </picture>
 </a>
 
@@ -15,13 +15,13 @@
 
 ## Sobre mí
 
-Soy ingeniero de minas y metalurgia y construyo la tecnología con la que la industria opera mejor. Mi trabajo está donde se cruzan la ingeniería, el software y la inteligencia artificial, desde una cámara hiperespectral o un PLC en una estación eléctrica hasta la app que usa la gente y el servidor que la sostiene.
+Soy **programador full stack**, **ingeniero de minas y metalurgia** y **científico de datos**. Me especializo en **modelamiento estocástico** y **machine learning**, y llevo esos modelos a aplicaciones reales, desde una cámara hiperespectral o un sensor IIoT en una estación eléctrica hasta la app que usa la gente y la red y los servidores que la sostienen.
 
 **Si un proceso se puede medir, se puede automatizar. Y si se puede automatizar, se puede hacer más inteligente.**
 
 ## Áreas de impacto
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/areas-dark.svg?v=1"><img alt="Seis áreas de impacto. Ingeniería que se programa, con cálculos de minería y metalurgia en código validado como MineLab. Visión artificial e hiperespectral con cámaras de Living Optics, OpenCV, YOLO y machine learning. Automatización industrial con PLC Siemens, equipos Schneider Electric en estaciones eléctricas, MQTT y Node-RED. IA en la operación con asistentes RAG y modelos de visión. Apps multientorno para web, Windows, macOS, Linux, Android e iOS. Infraestructura con servidores Linux, AWS, Azure, Google Cloud y contenedores." src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/areas-light.svg?v=1" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/areas-dark.svg?v=2"><img alt="Nueve áreas de impacto. Full stack multientorno para web, escritorio y móvil. Ciencia de datos. Modelamiento estocástico con simulación Monte Carlo y geoestadística. Machine learning de punta a punta. Visión artificial e hiperespectral con Living Optics, OpenCV y YOLO. IIoT y automatización industrial con MQTT, Node-RED, PLC Siemens y Schneider Electric. Redes e infraestructura con Linux, AWS, Azure y Google Cloud. Ingeniería de minas llevada a código como MineLab. IA en la operación con asistentes RAG y modelos de visión." src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/areas-light.svg?v=2" width="100%"></picture>
 
 ## Proyecto insignia
 
@@ -37,8 +37,8 @@ Soy ingeniero de minas y metalurgia y construyo la tecnología con la que la ind
 ## Con qué trabajo
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg?v=7">
-  <img alt="Lenguajes (Python, C#, C++, Rust, Go, COBOL y más), web, nube (AWS, Azure, Google Cloud), servidores Linux y DevOps, visión artificial, machine learning, automatización industrial (Siemens, Schneider), Power Platform y automatización" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg?v=7" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg?v=8">
+  <img alt="Lenguajes (Python, C#, C++, Rust, Go, COBOL y más), web y backend, ciencia de datos y machine learning, visión artificial, IIoT y automatización industrial, redes, servidores y DevOps, nube (AWS, Azure, Google Cloud), Power Platform y automatización" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg?v=8" width="100%">
 </picture>
 
 ## Actividad y lenguajes
