@@ -37,7 +37,6 @@ async function fetchData() {
         }
       }
       contributionsCollection {
-        totalCommitContributions
         contributionCalendar { totalContributions weeks { contributionDays { contributionCount } } }
       }
     }
@@ -74,7 +73,7 @@ function summarize(user) {
   return {
     metrics: [
       ['Contribuciones', cal.totalContributions, 'último año'],
-      ['Commits', user.contributionsCollection.totalCommitContributions, 'último año'],
+      ['Días activos', cal.weeks.flatMap((w) => w.contributionDays).filter((d) => d.contributionCount > 0).length, 'último año'],
       ['En GitHub', new Date(user.createdAt).getUTCFullYear(), 'desde'],
       ['Repos públicos', user.repositories.totalCount, 'propios'],
       ['Estrellas', repos.reduce((a, r) => a + r.stargazerCount, 0), 'recibidas'],
