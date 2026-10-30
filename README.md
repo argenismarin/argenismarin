@@ -11,19 +11,19 @@
   <a href="https://github.com/argenismarin?tab=repositories"><img alt="Estrellas" src="https://img.shields.io/github/stars/argenismarin?style=for-the-badge&label=estrellas&color=f2c94c&labelColor=0f172a&logo=starship&logoColor=white"></a>
 </p>
 
-## 👷 Sobre mí
+## Sobre mí
 
 Soy ingeniero de minas y metalurgia y programo porque me gusta construir mis propias herramientas. Empecé automatizando tareas repetitivas con Python y hoy desarrollo aplicaciones web completas, desde la base de datos hasta la interfaz que usa la gente.
 
 Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle trabajo manual a los procesos y usar la inteligencia artificial donde de verdad aporta.
 
-- 🔭 Hago crecer **[MineLab](https://github.com/argenismarin/MineLab)**, una librería de Python para ingeniería minera publicada en PyPI
-- ⚡ Construyo PWAs con Cloudflare Workers, D1 y notificaciones push
-- 🤖 Integro IA en flujos reales, como asistentes con RAG y lectura de facturas con OCR
-- 🧾 Automatizo registros, certificados y formularios para que nadie tenga que hacerlos a mano
-- 🌱 Siempre estoy aprendiendo algo nuevo
+- Hago crecer **[MineLab](https://github.com/argenismarin/MineLab)**, una librería de Python para ingeniería minera publicada en PyPI
+- Construyo PWAs con Cloudflare Workers, D1 y notificaciones push
+- Diseño apps, flujos y tableros con Power Apps, Power Automate y Power BI
+- Integro IA en flujos reales, como asistentes con RAG y lectura de facturas con OCR
+- Automatizo registros, certificados y formularios para que nadie tenga que hacerlos a mano
 
-## ⛏️ Proyectos destacados
+## Proyectos destacados
 
 <p align="center">
   <a href="https://github.com/argenismarin/MineLab"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-minelab-dark.svg"><img alt="MineLab" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-minelab-light.svg" width="49%"></picture></a>
@@ -32,16 +32,14 @@ Me mueve llevar los cálculos de la ingeniería a código confiable, quitarle tr
   <a href="https://github.com/argenismarin/amor-compartido"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-amor-compartido-dark.svg"><img alt="Amor Compartido" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/card-amor-compartido-light.svg" width="49%"></picture></a>
 </p>
 
-## 🧰 Con qué trabajo
+## Con qué trabajo
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Cexpress%2Ctailwind%2Cpostgres%2Cprisma%2Ccloudflare%2Cvercel%2Cgit%2Cgithubactions%2Cselenium%2Clatex&perline=8&theme=dark">
-    <img alt="Python, TypeScript, JavaScript, React, Next.js, Node.js, Express, Tailwind, PostgreSQL, Prisma, Cloudflare, Vercel, Git, GitHub Actions, Selenium y LaTeX" src="https://skillicons.dev/icons?i=py%2Cts%2Cjs%2Creact%2Cnextjs%2Cnodejs%2Cexpress%2Ctailwind%2Cpostgres%2Cprisma%2Ccloudflare%2Cvercel%2Cgit%2Cgithubactions%2Cselenium%2Clatex&perline=8&theme=light">
-  </picture>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-dark.svg">
+  <img alt="Python, C#, C++, TypeScript, JavaScript, SQL, LaTeX, Next.js, React, Node.js, Power Apps, Power Automate, Power BI y más" src="https://raw.githubusercontent.com/argenismarin/argenismarin/main/assets/stack-light.svg" width="100%">
+</picture>
 
-## 📊 Actividad y lenguajes
+## Actividad y lenguajes
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/argenismarin/argenismarin/output/stats-dark.svg"><img alt="Estadísticas de GitHub" src="https://raw.githubusercontent.com/argenismarin/argenismarin/output/stats-light.svg" width="49%"></picture>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 356" width="1000" height="356" role="img" aria-label="Tecnologías con las que trabajo">
+  <style>
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise 0.7s ease-out both; }
+  </style>
+  <rect x="0.5" y="0.5" width="999" height="355" rx="16" fill="#ffffff" stroke="#e2dccf"/>
+  <g transform="translate(0 30)"><g class="rise" style="animation-delay:0.10s">
+      <rect x="32" y="6" width="4" height="16" rx="2" fill="#c2410c"/>
+      <text x="46" y="19.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937">Lenguajes</text>
+      
+  <g transform="translate(250 0)">
+    <rect width="87.4" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="47.4" lengthAdjust="spacingAndGlyphs">Python</text>
+  </g>
+  <g transform="translate(346.4 0)">
+    <rect width="55.8" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="15.8" lengthAdjust="spacingAndGlyphs">C#</text>
+  </g>
+  <g transform="translate(411.2 0)">
+    <rect width="63.7" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="23.7" lengthAdjust="spacingAndGlyphs">C++</text>
+  </g>
+  <g transform="translate(483.9 0)">
+    <rect width="119.0" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="79.0" lengthAdjust="spacingAndGlyphs">TypeScript</text>
+  </g>
+  <g transform="translate(611.9 0)">
+    <rect width="119.0" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="79.0" lengthAdjust="spacingAndGlyphs">JavaScript</text>
+  </g>
+  <g transform="translate(739.9 0)">
+    <rect width="63.7" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="23.7" lengthAdjust="spacingAndGlyphs">SQL</text>
+  </g>
+  <g transform="translate(812.6 0)">
+    <rect width="79.5" height="28" rx="14" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#c2410c"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="39.5" lengthAdjust="spacingAndGlyphs">LaTeX</text>
+  </g>
+    </g></g><g transform="translate(0 84)"><g class="rise" style="animation-delay:0.20s">
+      <rect x="32" y="6" width="4" height="16" rx="2" fill="#0f766e"/>
+      <text x="46" y="19.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937">Web y backend</text>
+      
+  <g transform="translate(250 0)">
+    <rect width="95.3" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="55.3" lengthAdjust="spacingAndGlyphs">Next.js</text>
+  </g>
+  <g transform="translate(354.3 0)">
+    <rect width="79.5" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="39.5" lengthAdjust="spacingAndGlyphs">React</text>
+  </g>
+  <g transform="translate(442.8 0)">
+    <rect width="95.3" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="55.3" lengthAdjust="spacingAndGlyphs">Node.js</text>
+  </g>
+  <g transform="translate(547.1 0)">
+    <rect width="95.3" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="55.3" lengthAdjust="spacingAndGlyphs">Express</text>
+  </g>
+  <g transform="translate(651.4000000000001 0)">
+    <rect width="134.8" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="94.8" lengthAdjust="spacingAndGlyphs">Tailwind CSS</text>
+  </g>
+  <g transform="translate(795.2 0)">
+    <rect width="111.1" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="71.1" lengthAdjust="spacingAndGlyphs">Socket.io</text>
+  </g>
+  <g transform="translate(250 40)">
+    <rect width="87.4" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="47.4" lengthAdjust="spacingAndGlyphs">Prisma</text>
+  </g>
+  <g transform="translate(346.4 40)">
+    <rect width="119.0" height="28" rx="14" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#0f766e"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="79.0" lengthAdjust="spacingAndGlyphs">PostgreSQL</text>
+  </g>
+    </g></g><g transform="translate(0 178)"><g class="rise" style="animation-delay:0.30s">
+      <rect x="32" y="6" width="4" height="16" rx="2" fill="#b7791f"/>
+      <text x="46" y="19.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937">Power Platform</text>
+      
+  <g transform="translate(250 0)">
+    <rect width="119.0" height="28" rx="14" fill="#b7791f" fill-opacity="0.12" stroke="#b7791f" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#b7791f"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="79.0" lengthAdjust="spacingAndGlyphs">Power Apps</text>
+  </g>
+  <g transform="translate(378 0)">
+    <rect width="150.6" height="28" rx="14" fill="#b7791f" fill-opacity="0.12" stroke="#b7791f" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#b7791f"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="110.6" lengthAdjust="spacingAndGlyphs">Power Automate</text>
+  </g>
+  <g transform="translate(537.6 0)">
+    <rect width="103.2" height="28" rx="14" fill="#b7791f" fill-opacity="0.12" stroke="#b7791f" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#b7791f"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="63.2" lengthAdjust="spacingAndGlyphs">Power BI</text>
+  </g>
+    </g></g><g transform="translate(0 232)"><g class="rise" style="animation-delay:0.40s">
+      <rect x="32" y="6" width="4" height="16" rx="2" fill="#2563eb"/>
+      <text x="46" y="19.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937">Nube</text>
+      
+  <g transform="translate(250 0)">
+    <rect width="182.2" height="28" rx="14" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#2563eb"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="142.2" lengthAdjust="spacingAndGlyphs">Cloudflare Workers</text>
+  </g>
+  <g transform="translate(441.20000000000005 0)">
+    <rect width="55.8" height="28" rx="14" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#2563eb"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="15.8" lengthAdjust="spacingAndGlyphs">D1</text>
+  </g>
+  <g transform="translate(506.00000000000006 0)">
+    <rect width="87.4" height="28" rx="14" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#2563eb"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="47.4" lengthAdjust="spacingAndGlyphs">Vercel</text>
+  </g>
+  <g transform="translate(602.4000000000001 0)">
+    <rect width="150.6" height="28" rx="14" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#2563eb"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="110.6" lengthAdjust="spacingAndGlyphs">GitHub Actions</text>
+  </g>
+  <g transform="translate(762.0000000000001 0)">
+    <rect width="63.7" height="28" rx="14" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#2563eb"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="23.7" lengthAdjust="spacingAndGlyphs">Git</text>
+  </g>
+    </g></g><g transform="translate(0 286)"><g class="rise" style="animation-delay:0.50s">
+      <rect x="32" y="6" width="4" height="16" rx="2" fill="#6d28d9"/>
+      <text x="46" y="19.5" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1f2937">Datos y automatización</text>
+      
+  <g transform="translate(250 0)">
+    <rect width="95.3" height="28" rx="14" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#6d28d9"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="55.3" lengthAdjust="spacingAndGlyphs">Jupyter</text>
+  </g>
+  <g transform="translate(354.3 0)">
+    <rect width="87.4" height="28" rx="14" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#6d28d9"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="47.4" lengthAdjust="spacingAndGlyphs">pandas</text>
+  </g>
+  <g transform="translate(450.70000000000005 0)">
+    <rect width="103.2" height="28" rx="14" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#6d28d9"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="63.2" lengthAdjust="spacingAndGlyphs">Selenium</text>
+  </g>
+  <g transform="translate(562.9000000000001 0)">
+    <rect width="119.0" height="28" rx="14" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#6d28d9"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="79.0" lengthAdjust="spacingAndGlyphs">OpenAI API</text>
+  </g>
+  <g transform="translate(690.9000000000001 0)">
+    <rect width="63.7" height="28" rx="14" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#6d28d9"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="23.7" lengthAdjust="spacingAndGlyphs">RAG</text>
+  </g>
+  <g transform="translate(763.6000000000001 0)">
+    <rect width="63.7" height="28" rx="14" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="17" cy="14" r="4" fill="#6d28d9"/>
+    <text x="27" y="19.04" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#1f2937" textLength="23.7" lengthAdjust="spacingAndGlyphs">OCR</text>
+  </g>
+    </g></g>
+</svg>

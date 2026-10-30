@@ -182,9 +182,59 @@ function footer(t) {
 `;
 }
 
+const STACK = [
+  ['Lenguajes', 'copper', ['Python', 'C#', 'C++', 'TypeScript', 'JavaScript', 'SQL', 'LaTeX']],
+  ['Web y backend', 'teal', ['Next.js', 'React', 'Node.js', 'Express', 'Tailwind CSS', 'Socket.io', 'Prisma', 'PostgreSQL']],
+  ['Power Platform', 'gold', ['Power Apps', 'Power Automate', 'Power BI']],
+  ['Nube', 'blue', ['Cloudflare Workers', 'D1', 'Vercel', 'GitHub Actions', 'Git']],
+  ['Datos y automatización', 'violet', ['Jupyter', 'pandas', 'Selenium', 'OpenAI API', 'RAG', 'OCR']],
+];
+
+// Tarjeta del stack agrupada por categorías, con píldoras que saltan de línea solas
+function stack(t) {
+  const SW = 1000;
+  const left = 250;
+  const right = SW - 32;
+  let y = 30;
+  const rows = STACK.map(([label, color, items], i) => {
+    const rowY = y;
+    let x = left;
+    let line = 0;
+    const pills = items
+      .map((item) => {
+        const p = pill(0, 0, item, t[color], t, { size: 14, charW: 7.9, pad: 13 });
+        if (x + p.w > right) {
+          x = left;
+          line++;
+        }
+        const out = pill(x, line * 40, item, t[color], t, { size: 14, charW: 7.9, pad: 13 }).svg;
+        x += p.w + 9;
+        return out;
+      })
+      .join('');
+    y += 40 * (line + 1) + 14;
+    return `<g transform="translate(0 ${rowY})"><g class="rise" style="animation-delay:${(0.1 + i * 0.1).toFixed(2)}s">
+      <rect x="32" y="6" width="4" height="16" rx="2" fill="${t[color]}"/>
+      <text x="46" y="19.5" font-family="${SANS}" font-size="15" font-weight="700" fill="${t.text}">${esc(label)}</text>
+      ${pills}
+    </g></g>`;
+  }).join('');
+  const SH = y + 16;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" role="img" aria-label="Tecnologías con las que trabajo">
+  <style>
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise 0.7s ease-out both; }
+  </style>
+  <rect x="0.5" y="0.5" width="${SW - 1}" height="${SH - 1}" rx="16" fill="${t.card}" stroke="${t.border}"/>
+  ${rows}
+</svg>
+`;
+}
+
 mkdirSync(new URL('../assets/', import.meta.url), { recursive: true });
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(new URL(`../assets/header-${name}.svg`, import.meta.url), header(t));
   writeFileSync(new URL(`../assets/footer-${name}.svg`, import.meta.url), footer(t));
+  writeFileSync(new URL(`../assets/stack-${name}.svg`, import.meta.url), stack(t));
 }
 console.log('assets listos');
