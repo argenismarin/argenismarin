@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" role="img" aria-label="MineLab, librería de Python para ingeniería de minas">
+  <style>
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .rise { animation: rise 0.7s ease-out both; }
+</style>
+  <defs><clipPath id="card"><rect width="1000" height="420" rx="16"/></clipPath></defs>
+  <g clip-path="url(#card)">
+    <rect width="1000" height="420" fill="#ffffff"/>
+    
+  <linearGradient id="sh" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <rect x="-600" y="0" width="500" height="420" fill="url(#sh)" transform="skewX(-18)">
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;1900 0" keyTimes="0;0.7;1" dur="7s" repeatCount="indefinite" additive="sum"/>
+  </rect>
+  </g>
+  <rect x="0.5" y="0.5" width="999" height="419" rx="16" fill="none" stroke="#e2dccf"/>
+  
+  <defs>
+    <linearGradient id="num" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#c2410c"/>
+      <stop offset="1" stop-color="#b7791f"/>
+    </linearGradient>
+    <linearGradient id="emb" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#c2410c"/>
+      <stop offset="1" stop-color="#b7791f"/>
+    </linearGradient>
+    <clipPath id="tick"><rect x="1" y="378" width="998" height="40"/></clipPath>
+  </defs>
+  <rect x="36" y="36" width="60" height="60" rx="16" fill="url(#emb)"/>
+  <g transform="translate(48 48) scale(1.5)"><path d="M3 21 L16 8" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/><path d="M8 2 Q22 2.5 22.5 16.5 Q18 6.5 8 2 Z" fill="#ffffff" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/></g>
+  <text x="112" y="66" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#1f2937">MineLab</text>
+  <text x="114" y="90" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f6b7a">pip install minelab</text>
+  <text x="36" y="140" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#1f2937" fill-opacity="0.88">La caja de herramientas de Python que todo</text>
+  <text x="36" y="166" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#1f2937" fill-opacity="0.88">ingeniero de minas merece tener.</text>
+  <g transform="translate(36 214)"><g class="rise" style="animation-delay:0.20s">
+        <text font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="url(#num)">388</text>
+        <text x="76" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5f6b7a">funciones</text>
+      </g></g><g transform="translate(246 214)"><g class="rise" style="animation-delay:0.30s">
+        <text font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="url(#num)">16</text>
+        <text x="54" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5f6b7a">módulos</text>
+      </g></g><g transform="translate(36 278)"><g class="rise" style="animation-delay:0.40s">
+        <text font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="url(#num)">897</text>
+        <text x="76" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5f6b7a">tests</text>
+      </g></g><g transform="translate(246 278)"><g class="rise" style="animation-delay:0.50s">
+        <text font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="url(#num)">94%</text>
+        <text x="87" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#5f6b7a">cobertura</text>
+      </g></g>
+  
+  <g transform="translate(36 334)">
+    <rect width="117.4" height="27" rx="13.5" fill="#c2410c" fill-opacity="0.12" stroke="#c2410c" stroke-opacity="0.45"/>
+    <circle cx="15" cy="13.5" r="4" fill="#c2410c"/>
+    <text x="25" y="18.18" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" textLength="81.4" lengthAdjust="spacingAndGlyphs">PyPI v0.1.1</text>
+  </g>
+  <g transform="translate(161.4 334)">
+    <rect width="117.4" height="27" rx="13.5" fill="#b7791f" fill-opacity="0.12" stroke="#b7791f" stroke-opacity="0.45"/>
+    <circle cx="15" cy="13.5" r="4" fill="#b7791f"/>
+    <text x="25" y="18.18" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" textLength="81.4" lengthAdjust="spacingAndGlyphs">6 estrellas</text>
+  </g>
+  <g transform="translate(286.8 334)">
+    <rect width="124.8" height="27" rx="13.5" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-opacity="0.45"/>
+    <circle cx="15" cy="13.5" r="4" fill="#0f766e"/>
+    <text x="25" y="18.18" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" textLength="88.8" lengthAdjust="spacingAndGlyphs">Python 3.10+</text>
+  </g>
+  <g transform="translate(419.6 334)">
+    <rect width="58.2" height="27" rx="13.5" fill="#6d28d9" fill-opacity="0.12" stroke="#6d28d9" stroke-opacity="0.45"/>
+    <circle cx="15" cy="13.5" r="4" fill="#6d28d9"/>
+    <text x="25" y="18.18" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#1f2937" textLength="22.2" lengthAdjust="spacingAndGlyphs">MIT</text>
+  </g>
+
+  <rect x="512" y="36" width="452" height="324" rx="12" fill="#0b1020" stroke="#e2dccf"/>
+  <path d="M512 48a12 12 0 0 1 12-12h428a12 12 0 0 1 12 12v18H512z" fill="#141b2e"/>
+  <circle cx="532" cy="51" r="5" fill="#ff5f57"/><circle cx="550" cy="51" r="5" fill="#febc2e"/><circle cx="568" cy="51" r="5" fill="#28c840"/>
+  <text x="738" y="55" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#8b98ab">inicio_rapido.py</text>
+  <text x="534" y="96" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.30s"><tspan fill="#c792ea">import</tspan><tspan fill="#e6edf3"> minelab </tspan><tspan fill="#c792ea">as</tspan><tspan fill="#e6edf3"> ml</tspan></text><text x="534" y="115.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.37s"></text><text x="534" y="135" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.44s"><tspan fill="#6f7f99"># Economía minera, VAN del proyecto</tspan></text><text x="534" y="154.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.51s"><tspan fill="#e6edf3">van = ml.</tspan><tspan fill="#82aaff">npv</tspan><tspan fill="#e6edf3">(rate=</tspan><tspan fill="#f78c6c">0.10</tspan><tspan fill="#e6edf3">,</tspan></text><text x="534" y="174" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.58s"><tspan fill="#e6edf3">    cashflows=[</tspan><tspan fill="#f78c6c">-100_000</tspan><tspan fill="#e6edf3">, </tspan><tspan fill="#f78c6c">30_000</tspan><tspan fill="#e6edf3">, </tspan><tspan fill="#f78c6c">45_000</tspan><tspan fill="#e6edf3">])</tspan></text><text x="534" y="193.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.65s"></text><text x="534" y="213" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.72s"><tspan fill="#6f7f99"># Voladura, fragmentación Kuz-Ram</tspan></text><text x="534" y="232.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.79s"><tspan fill="#e6edf3">x50 = ml.</tspan><tspan fill="#82aaff">kuz_ram_x50</tspan><tspan fill="#e6edf3">(powder_factor=</tspan><tspan fill="#f78c6c">0.5</tspan><tspan fill="#e6edf3">,</tspan></text><text x="534" y="252" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.86s"><tspan fill="#e6edf3">    rock_factor=</tspan><tspan fill="#f78c6c">8.0</tspan><tspan fill="#e6edf3">, charge_weight=</tspan><tspan fill="#f78c6c">150.0</tspan><tspan fill="#e6edf3">)</tspan></text><text x="534" y="271.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:0.93s"></text><text x="534" y="291" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:1.00s"><tspan fill="#6f7f99"># Procesamiento, recuperación por flotación</tspan></text><text x="534" y="310.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:1.07s"><tspan fill="#e6edf3">rec = ml.</tspan><tspan fill="#82aaff">flotation_recovery</tspan><tspan fill="#e6edf3">(feed_grade=</tspan><tspan fill="#f78c6c">1.2</tspan><tspan fill="#e6edf3">,</tspan></text><text x="534" y="330" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.8" xml:space="preserve" class="rise" style="animation-delay:1.14s"><tspan fill="#e6edf3">    concentrate_grade=</tspan><tspan fill="#f78c6c">28.0</tspan><tspan fill="#e6edf3">, tail_grade=</tspan><tspan fill="#f78c6c">0.15</tspan><tspan fill="#e6edf3">)</tspan></text>
+  <rect x="851.4" y="317" width="8" height="16" fill="#c2410c" opacity="0">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" begin="1.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <line x1="0" x2="1000" y1="378" y2="378" stroke="#e2dccf"/>
+  <g clip-path="url(#tick)"><g transform="translate(0 404)">
+    <g><text x="0" y="0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f6b7a" textLength="2519.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">utilities   ·   geostatistics   ·   mine_planning   ·   geomechanics   ·   mineral_processing   ·   equipment   ·   drilling_blasting   ·   ventilation   ·   economics   ·   environmental   ·   production   ·   resource_classification   ·   data_management   ·   underground_mining   ·   hydrogeology   ·   surveying   ·   </text><text x="2519.4" y="0" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#5f6b7a" textLength="2519.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">utilities   ·   geostatistics   ·   mine_planning   ·   geomechanics   ·   mineral_processing   ·   equipment   ·   drilling_blasting   ·   ventilation   ·   economics   ·   environmental   ·   production   ·   resource_classification   ·   data_management   ·   underground_mining   ·   hydrogeology   ·   surveying   ·   </text><animateTransform attributeName="transform" type="translate" values="0 0;-2519.4 0" dur="60s" repeatCount="indefinite"/></g>
+  </g></g>
+</svg>
